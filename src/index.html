@@ -1,0 +1,49 @@
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <title>Medical ChatBot</title>
+    <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+
+</head>
+
+<body>
+    <h1>Welcome to the Medical ChatBot</h1>
+    <header id="menu">
+        <nav>
+            <ul>
+                <li><a href="#ChatBot">ChatBot</a></li>
+                <li><a href="#AboutUs">About Us</a></li>
+                <li><a href="#Services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="ChatBot">
+            <h2>🩺 Medical Chatbot</h2>
+            <input id="question" type="text" placeholder="Ask me something..." />
+            <button onclick="ask()">Send</button>
+            <div id="messages"></div>
+
+        </section>
+        <section id="AboutUs">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing accurate and up-to-date medical information.</p>
+        </section>
+        <section id="Services">
+            <h2>Services</h2>
+            <ul>
+                <li><a href="#">Symptom Checker</a></li>
+                <li><a href="#">Medication Information</a></li>
+                <li><a href="#">Health Tips</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Medical ChatBot. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
