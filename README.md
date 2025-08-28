@@ -32,20 +32,6 @@ A web-based **Medical ChatBot** powered by **FastAPI**, **LangChain**, and **Oll
 
 ---
 
-## Project Structure
-
- |── src/
-│ ├── index.html # Frontend HTML
-│ ├── style.css # Frontend CSS
-│ └── script.js # Frontend JS
-├── utils.py # Utility functions for data fetching, parsing, vector store, and LLM
-├── app.py # FastAPI backend
-└── vector_store/ # FAISS vector store saved locally
-
-
-
----
-
 ## Setup Instructions
 
 1. **Clone the repository**
