@@ -49,5 +49,5 @@ A web-based **Medical ChatBot** powered by **FastAPI**, **LangChain**, and **Oll
 
 -The FAISS vector store will be built on first run and stored in the vector_store/ directory for faster queries next time.
 
-## Project Structure
+
 
