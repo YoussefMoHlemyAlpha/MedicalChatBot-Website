@@ -1,0 +1,167 @@
+/* Reset and global styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background: linear-gradient(90deg, #ffecd2, #fcb69f);
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;   /* removed the space */
+  color: black;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Navbar */
+#menu {
+  padding: 15px;
+  border: 5px solid white;
+  border-radius: 30px;
+  background: linear-gradient(90deg, rgb(21, 142, 186), rgb(14, 105, 138));
+  margin: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  margin: 0 15px;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#menu li a:hover {
+  background-color: white;
+  color: rgb(21, 142, 186);
+  transform: scale(1.05);
+}
+
+/* Section headings */
+h2 {
+  font-size: 1.5rem;
+  color: black;
+  font-style: italic;
+  margin: 20px 0 10px;
+}
+
+/* Chatbot section */
+#ChatBot {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#messages {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 120px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Input and button */
+#question {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: rgb(21, 142, 186);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: rgb(17, 110, 142);
+  transform: scale(1.05);
+}
+
+#AboutUs{
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+#Services{
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
+}
+#Services ul {
+list-style: none;
+padding: 0;
+}
+#Services li a {
+    text-decoration: none;
+    font-size: large;
+    color: rgb(21, 142, 186);
+    font-weight: bold;
+}
+
+#Services li {
+  margin: 10px 0;
+}
+p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+/* User messages */
+.user-message {
+    color: #1e90ff;  
+    font-weight: bold;
+}
+
+/* Bot messages */
+.bot-message {
+    color: #2e8b57;   
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
