@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
     <title>Medical ChatBot</title>
     <link rel="stylesheet" href="/static/style.css">
-  <script src="/static/script.js" defer></script>
+  <script src="/static/script.js?v=1765380246" defer></script>
 
 </head>
 
@@ -15,13 +15,14 @@
             <ul>
                 <li><a href="#ChatBot">ChatBot</a></li>
                 <li><a href="#AboutUs">About Us</a></li>
-                <li><a href="#Services">Services</a></li>
+                <li><a href="#Medicines">Medicines</a></li>
+                <li id="auth-link"><a href="#" onclick="showAuthModal()">Login / Register</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="ChatBot">
-            <h2>🩺 Medical Chatbot</h2>
+            <h2> Medical Chatbot</h2>
             <input id="question" type="text" placeholder="Ask me something..." />
             <button onclick="ask()">Send</button>
             <div id="messages"></div>
@@ -31,13 +32,140 @@
             <h2>About Us</h2>
             <p>We are dedicated to providing accurate and up-to-date medical information.</p>
         </section>
-        <section id="Services">
-            <h2>Services</h2>
-            <ul>
-                <li><a href="#">Symptom Checker</a></li>
-                <li><a href="#">Medication Information</a></li>
-                <li><a href="#">Health Tips</a></li>
-            </ul>
+        <section id="Medicines">
+            <h2> Available Medicines</h2>
+            
+            <h3 class="category-title">General Pain & Relief</h3>
+            <div class="medicine-grid">
+                <div class="med-card">
+                    <img src="/static/panadol.jpg" width="100" height="100" alt="Panadol"/>
+                    <h3>Panadol Extra</h3>
+                    <p>Fever and pain relief</p>
+                    <p class="price">$12.00</p>
+                    <span class="med-badge">General</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Panadol Extra', 12.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Panadol Extra', 12.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <img src="/static/Asprin.jpg" width="100" height="100" alt="Asprin"/>
+                    <h3>Aspirin 81mg</h3>
+                    <p>Heart health support</p>
+                    <p class="price">$5.50</p>
+                    <span class="med-badge">General</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Aspirin 81mg', 5.50)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Aspirin 81mg', 5.50)">💳 Buy Now</button>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <img src="/static/telfast.jpg" width="100" height="100" alt="Telfast"/>
+                    <h3>Telfast</h3>
+                    <p>Allergy relief</p>
+                    <p class="price">$15.00</p>
+                    <span class="med-badge">General</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Telfast', 15.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Telfast', 15.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="category-title">Diabetes Care</h3>
+            <div class="medicine-grid">
+                 <div class="med-card">
+                    <img src="/static/metformin.png" width="100" height="100" alt="Metformin"/>
+                    <h3>Metformin 500mg</h3>
+                    <p>Blood sugar control</p>
+                    <p class="price">$8.00</p>
+                    <span class="med-badge">Diabetes</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Metformin 500mg', 8.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Metformin 500mg', 8.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <img src="/static/insulin.png" width="100" height="100" alt="Insulin"/>
+                    <h3>Insulin Pen</h3>
+                    <p>Rapid acting insulin</p>
+                    <p class="price">$45.00</p>
+                    <span class="med-badge">Diabetes</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Insulin Pen', 45.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Insulin Pen', 45.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="category-title">Cancer Support</h3>
+            <div class="medicine-grid">
+                 <div class="med-card">
+                    <img src="/static/tamoxifen.png" width="100" height="100" alt="Tamoxifen"/>
+                    <h3>Tamoxifen 20mg</h3>
+                    <p>Hormonal therapy</p>
+                    <p class="price">$25.00</p>
+                    <span class="med-badge">Cancer</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Tamoxifen 20mg', 25.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Tamoxifen 20mg', 25.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+                 <div class="med-card">
+                    <img src="/static/imatinib.png" width="100" height="100" alt="Imatinib"/>
+                    <h3>Imatinib 400mg</h3>
+                    <p>Targeted therapy</p>
+                    <p class="price">$100.00</p>
+                    <span class="med-badge">Cancer</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Imatinib 400mg', 100.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Imatinib 400mg', 100.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="category-title">Weight Management</h3>
+             <div class="medicine-grid">
+                 <div class="med-card">
+                    <img src="/static/orlistat.png" width="100" height="100" alt="Orlistat"/>
+                    <h3>Orlistat 120mg</h3>
+                    <p>Fat absorption inhibitor</p>
+                    <p class="price">$30.00</p>
+                    <span class="med-badge">Obesity</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Orlistat 120mg', 30.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Orlistat 120mg', 30.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">Mental Health</h3>
+             <div class="medicine-grid">
+                 <div class="med-card">
+                    <img src="/static/prozac.png" width="100" height="100" alt="Prozac"/>
+                    <h3>Prozac 20mg</h3>
+                    <p>Antidepressant (SSRI)</p>
+                    <p class="price">$18.00</p>
+                    <span class="med-badge">Depression</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Prozac 20mg', 18.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Prozac 20mg', 18.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+                 <div class="med-card">
+                    <img src="/static/prozac.png" width="100" height="100" alt="Zoloft"/>
+                    <h3>Zoloft 50mg</h3>
+                    <p>Mood stabilizer</p>
+                    <p class="price">$20.00</p>
+                    <span class="med-badge">Depression</span>
+                    <div class="med-actions">
+                        <button class="btn-cart" onclick="addToCart('Zoloft 50mg', 20.00)">🛒 Add to Cart</button>
+                        <button class="btn-buy" onclick="buyNow('Zoloft 50mg', 20.00)">💳 Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="margin-top:30px; font-style: italic; color:#555">This list is for reference only. Please consult your doctor.</p>
         </section>
     </main>
     <footer>

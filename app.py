@@ -63,4 +63,7 @@ def ask(query: Query):
         }
     except Exception as e:
         logger.error(f"Error processing request: {e}")
+        str_error = str(e)
+        if "No connection could be made" in str_error or "10061" in str_error or "Connection refused" in str_error:
+             return {"error": "Authentication/Connection Error. Is the Ollama (LLM) server running? Please start it to use the chatbot."}
         return {"error": str(e)}
