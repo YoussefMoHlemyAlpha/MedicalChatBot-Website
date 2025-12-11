@@ -1,7 +1,7 @@
 # Medical ChatBot
 
 A web-based **Medical ChatBot** powered by **FastAPI**, **LangChain**, and **Ollama LLM**, providing accurate and up-to-date medical information. The chatbot retrieves information from **MedlinePlus** datasets and answers user queries in clear and concise language.
-
+![alt text](image.png)
 ---
 
 ## Features
