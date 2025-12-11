@@ -15,9 +15,7 @@ function loadCart() {
     updateCartDisplay();
 }
 
-// Initial load
-// Initial load moved to DOMContentLoaded
-// Removed call to updateCartDisplay here to ensure DOM is ready first
+
 
 function updateAuthUI() {
     const authLink = document.getElementById('auth-link');
@@ -198,7 +196,10 @@ async function ask() {
         const response = await fetch("http://127.0.0.1:8000/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question })
+            body: JSON.stringify({
+                question: question,
+                user_id: currentUser ? currentUser.username : "guest"
+            })
         });
 
         console.log("Response status:", response.status);
@@ -208,8 +209,42 @@ async function ask() {
         // Remove loading message
         messagesDiv.removeChild(loadingMsg);
 
-        if (data.intent) {
-            // Commerce response from BERT
+        if (data.action) {
+            const act = data.action;
+            console.log("Executing Action:", act);
+
+            if (act.type === 'buy_now') {
+                // Open checkout immediately with ONLY these items
+
+                // 1. Clear existing cart
+                cart = [];
+                saveCart();
+
+
+                for (let i = 0; i < act.quantity; i++) {
+                    cart.push({
+                        name: act.medicine,
+                        price: act.price,
+                        quantity: 1,
+                        timestamp: new Date()
+                    });
+                }
+                saveCart();
+                updateCartDisplay();
+                showCart();
+                checkout();
+            }
+            else if (act.type === 'add_to_cart') {
+                for (let i = 0; i < act.quantity; i++) {
+                    addToCart(act.medicine, act.price);
+                }
+            }
+
+            // Show bot response too
+            addMessage("Smart Agent", data.answer, "commerce");
+
+        } else if (data.intent) {
+            // Commerce response from BERT (Intermediate state like Confirmation question)
             addMessage("Smart Agent", data.answer, "commerce");
         } else if (data.answer) {
             addMessage("Medical Bot", data.answer, "bot");

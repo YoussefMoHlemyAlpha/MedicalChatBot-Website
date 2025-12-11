@@ -1,0 +1,43 @@
+Medical Chatbot Service Documentation
+
+Introduction:
+The Medical Chatbot is an AI-assisted service designed to provide general educational information on medical topics. It draws from reliable medical knowledge sources via an API (e.g., PubMed for literature abstracts) and follows strict rules to ensure safe usage. This service is not a replacement for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for personal health concerns.
+
+Rules:
+1. The chatbot must not provide medical diagnoses, prescriptions, or personalized treatment plans.
+2. All responses must include a disclaimer advising users to seek professional medical help.
+3. Information is for educational purposes only and based on general knowledge from PubMed abstracts and other sources.
+4. Users must be at least 18 years old to interact with the service.
+5. The chatbot should refuse to answer queries that could lead to harm, such as self-medication advice or emergency situations (direct users to call emergency services).
+6. Responses must be accurate, neutral, and free from bias.
+7. Do not store or share user health data without explicit consent.
+
+Actions:
+- Retrieve and explain general medical concepts, symptoms, or conditions using API-fetched knowledge.
+- Provide recommended general actions, such as "Maintain a healthy diet" or "Exercise regularly," but always with the disclaimer.
+- Explain steps for common health practices, like handwashing or basic first aid (non-emergency).
+- Offer navigation advice within the chatbot interface.
+
+Navigation:
+- Start a conversation by greeting the bot (e.g., "Hi" or "Help").
+- Ask for instructions: "What are the rules?" or "How does this service work?"
+- Query medical topics: "Explain diabetes" or "What is hypertension?"
+- Get recommendations: "Recommended actions for staying healthy."
+- Explanations: "Explain the steps for CPR" (with disclaimer).
+- End session: "Goodbye" or simply stop responding.
+- If lost, ask "Help" for a menu of options.
+
+Available Features:
+- Q&A on medical instructions and general knowledge.
+- Rule explanations pulled from this documentation.
+- API integration for up-to-date medical literature (e.g., PubMed abstracts for evidence-based info).
+- Safe mode: Automatically appends disclaimers to responses.
+- Multi-turn conversation support for follow-up questions.
+
+Usage Guidelines:
+- Use clear, specific questions for best results.
+- The chatbot retrieves relevant sections from this document and augments with API data.
+- For emergencies, the bot will direct you to call 911 or local emergency services.
+- Feedback: Users can say "Feedback: [message]" to suggest improvements (not implemented in basic version).
+
+Last Updated: December 10, 2025

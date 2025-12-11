@@ -9,4 +9,11 @@ openai
 tiktoken
 python-dotenv
 sentence-transformers
-
+chromadb
+langchain-chroma
+requests
+biopython
+torch
+scikit-learn
+fuzzywuzzy
+python-Levenshtein
