@@ -13,6 +13,7 @@ A web-based **Medical ChatBot** powered by **FastAPI**, **LangChain**, and **Oll
 - Real-time chatbot interaction with loading feedback.
 - Sections for **About Us** and **Services**.
 - Encourages users to consult licensed healthcare providers for personal concerns.
+<img width="1871" height="706" alt="image" src="https://github.com/user-attachments/assets/f3dc7950-7cd3-47c5-81fd-63f1c6ac3c03" />
 
 ---
 
