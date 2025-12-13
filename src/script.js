@@ -244,7 +244,7 @@ async function ask() {
             addMessage("Smart Agent", data.answer, "commerce");
 
         } else if (data.intent) {
-            // Commerce response from BERT (Intermediate state like Confirmation question)
+           
             addMessage("Smart Agent", data.answer, "commerce");
         } else if (data.answer) {
             addMessage("Medical Bot", data.answer, "bot");
