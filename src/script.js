@@ -171,7 +171,7 @@ function addMessage(sender, text, type) {
     p.className = className;
     p.innerHTML = `<strong>${sender}:</strong> ${text}`;
     messagesDiv.appendChild(p);
-    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scrolls the container to the very bottom.
 }
 
 async function ask() {
