@@ -381,3 +381,4 @@ user_prompt,label
 """add 2 Zoloft to cart""","""add_to_cart"""
 """I want aspirin""","""buy_medicine"""
 """I want one Imatinib""","""buy_medicine"""
+""" i need to buy 3 Metformin""","""buy_medicine"""

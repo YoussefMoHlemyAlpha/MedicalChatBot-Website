@@ -98,7 +98,7 @@ def get_medlineplus_info(query, language="en"):
             return None
 
         root = ET.fromstring(response.content)
-        for content in root.findall(".//content"):
+        for content in root.findall(".//content"):     # Iterates through returned health topics
             title = content.get("title", "").strip()
             url = content.get("url", "").strip()
             if not url:
@@ -134,7 +134,7 @@ def get_medical_info(question):
         handle.close()
         if record["IdList"]:
             pmid = record["IdList"][0]
-            handle = Entrez.efetch(db="pubmed", id=pmid, rettype="abstract", retmode="text")
+            handle = Entrez.efetch(db="pubmed", id=pmid, rettype="abstract", retmode="text")  # Fetches abstract text
             abstract = handle.read().strip()
             handle.close()
             return (
